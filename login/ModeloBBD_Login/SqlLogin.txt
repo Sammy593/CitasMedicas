@@ -1,0 +1,31 @@
+
+/*
+CREACION DE LA BASES DE DATOS DE LOGIN 
+*/
+CREATE TABLE 'logincitasm'.'login' ('idUsuario' INT(11) NOT NULL AUTO_INCREMENT ,
+ 'nombreUsuario' VARCHAR(50) NOT NULL , 'apellidoUsuario' VARCHAR(50) NOT NULL , 
+ 'cedulaUsuario' VARCHAR(10) NOT NULL , 'telefonoUsuario' VARCHAR(15) NOT NULL , 
+ 'direccionUsuario' VARCHAR(80) NOT NULL , 'correoUsuario' VARCHAR(100) NOT NULL ,
+  'ciudadUsuario' VARCHAR(30) NOT NULL , 'fotoUsuario' LONGBLOB NOT NULL ,
+   PRIMARY KEY ('idUsuario')) ENGINE = InnoDB;
+
+/*
+Añadimos otros campos mas a la tabla de la base de datos 
+*/
+ALTER TABLE 'login' ADD 'nombreUsuaLog' VARCHAR(20) NOT NULL AFTER 'apellidoUsuario', 
+ADD 'passwordLog' VARCHAR(20) NOT NULL AFTER 'nombreUsuaLog';
+
+/*Elimino dos datos de la tabla*/
+ALTER TABLE `login` DROP `direccionUsuario`;
+ALTER TABLE `login` DROP `ciudadUsuario`;
+
+
+/*Añadimos datos*/
+INSERT INTO `login` (`idUsuario`, `nombreUsuario`, `apellidoUsuario`, `nombreUsuaLog`, 
+`passwordLog`, `cedulaUsuario`, `telefonoUsuario`, `correoUsuario`) 
+VALUES (NULL, 'Jhostyn', 'Gavilanez', 'JJSuarez', '12345678', '1234567892', '0985632456', 'jssuarez@espe.edu.ec');
+
+
+
+
+
