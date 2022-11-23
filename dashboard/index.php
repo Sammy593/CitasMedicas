@@ -11,6 +11,7 @@
     <div class="container">
         <div class="options">
             <h2 class="bar-title" data-id="index">Consultorio</h2>
+            <!-- Menu -->
             <ul>
                 <li data-id="doctors">Doctores</li>
                 <li data-id="speciality">Especialidades</li>
@@ -22,6 +23,7 @@
         </div>
         <iframe src="views/inicio.php" frameborder="0" class="views"></iframe>
     </div>
+    
     <script>
 
         let body = document.querySelector("body")
