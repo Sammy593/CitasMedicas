@@ -1,3 +1,7 @@
+<?php
+  $funcionUrl = funcionesBack("login");
+  require_once($funcionUrl);
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -34,7 +38,7 @@
             <!--Imagen del icono del Agendamiento de Citas -->
             <div class="d-flex justify-content-center">
               <img
-                src="./Images/LogotipoLogin.png"
+                src="<?php echo media(); ?>/img/imgLogin/LogotipoLogin.png"
                 alt="Perfil_Usuario"
                 style="height: 20rem"
               />
@@ -49,7 +53,7 @@
   <!--Imagen del icono del login -->
   <div class="d-flex justify-content-center">
     <img
-      src="./Images/Perfil_Usuario.png"
+      src="<?php echo media(); ?>/img/imgLogin/Perfil_Usuario.png"
       alt="Perfil_Usuario"
       style="height: 7rem"
     />
@@ -67,7 +71,7 @@
           <div class="input-group mt-4">
             <div class="input-group-text bg-info">
               <img
-                src="./Images/username-icon.svg"
+                src="<?php echo media(); ?>/img/imgLogin/username-icon.svg"
                 alt="username-icon"
                 style="height: 1rem"
               />
@@ -87,7 +91,7 @@
           <div class="input-group mt-1">
             <div class="input-group-text bg-info">
               <img
-                src="./Images/password-icon.svg"
+                src="<?php echo media(); ?>/img/imgLogin/password-icon.svg"
                 alt="password-icon"
                 style="height: 1rem"
               />
@@ -118,20 +122,10 @@
              
           </div>
         </tr>
-        <tr>
-          <div class="d-flex gap-1 justify-content-center mt-1">
-            <div>No tienes una Cuenta?</div>
-            <a href="RegistroUsuario.php" class="text-decoration-none text-info fw-semibold"
-              >Registrate</a
-            >
-          </div>
-        </tr>
       </table>
     </form>
   </div>
 </div>
-
-
             <!--fin comlumna dos -->
           </div>
           <!--fin dos columnas -->
@@ -141,10 +135,6 @@
 
       <!--fin Contnedor de tarjeta -->
     </div>
-
-
-       
-
   </body>
   
 </html>

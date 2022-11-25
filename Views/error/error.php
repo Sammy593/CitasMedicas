@@ -1,8 +1,3 @@
-//David
-<?php
-    require('menu_datos.php');
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    
+    Error
 </body>
 </html>

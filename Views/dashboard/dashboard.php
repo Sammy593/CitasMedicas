@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="<?php echo media(); ?>/css/estilos_dashboard.css">
     <title>C-Panel</title>
 </head>
 <body>
@@ -21,7 +21,7 @@
                 <li data-id="close">Salir</li>
             </ul>
         </div>
-        <iframe src="views/inicio.php" frameborder="0" class="views"></iframe>
+        <iframe src="Views/dashboard/inicio.php" frameborder="0" class="views"></iframe>
     </div>
     
     <script>
@@ -32,22 +32,22 @@
             let id = e.target.dataset.id
             switch (id) {
                 case "index":
-                    view.src = "views/inicio.php"
+                    view.src = "Views/dashboard/inicio.php"
                     break;
                 case "doctors":
-                    view.src = "views/doctores.php"
+                    view.src = "Views/dashboard/doctores.php"
                     break;
                 case "speciality":
-                    view.src = "views/especialidades.php"
+                    view.src = "Views/dashboard/especialidades.php"
                     break;
                 case "asistance":
-                    view.src = "views/asistentes.php"
+                    view.src = "Views/dashboard/asistentes.php"
                     break;
                 case "patient":
-                    view.src = "views/pacientes.php"
+                    view.src = "Views/dashboard/pacientes.php"
                     break;
                 case "cite":
-                    view.src = "views/citas.php"
+                    view.src = "Views/dashboard/citas.php"
                     break;
                 case "close":
                     alert("Salimos del sistema")
