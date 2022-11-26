@@ -1,6 +1,8 @@
  CREATE DATABASE ProyectoCitasMedicas;
 USE ProyectoCitasMedicas;
 
+-- SETENCIA DDL 
+
 CREATE TABLE Roles(
     id int primary key,
     descripcion varchar(50) not null,
@@ -20,8 +22,6 @@ CREATE TABLE Personas (
     CONSTRAINT CHK_Sexo CHECK (sexo = 'F' OR sexo = 'M')  
 );
 
--- Añadir un nuevo campo 
-ALTER TABLE Personas ADD COLUMN foto VARCHAR(350) AFTER estado;
 
 
 CREATE TABLE PersonaLogin(
@@ -62,6 +62,9 @@ CREATE TABLE Pacientes(
     CONSTRAINT CHK_Sexo CHECK (sexo = 'F' OR sexo = 'M')
 );
 
+-- AÃ±adir un nuevo campo 
+ALTER TABLE Pacientes ADD COLUMN foto VARCHAR(350) AFTER estado;
+
 CREATE TABLE Horario(
     id int primary key auto_increment,
     fechadatencion date not null,
@@ -95,5 +98,4 @@ ALTER TABLE Horario  ADD FOREIGN KEY (medico_id) REFERENCES personaespecialidade
 
 -- ROLES A PERSONA LOGIN
 ALTER TABLE roles  ADD FOREIGN KEY (id) REFERENCES personaLogin (id);
-
 
