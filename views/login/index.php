@@ -1,6 +1,6 @@
 <?php
-  $funcionUrl = funcionesBack("login");
-  require_once($funcionUrl);
+  /* $funcionUrl = shortener("login");
+  require_once($funcionUrl); */
 ?>
 <!DOCTYPE html>
 <html lang="en">
