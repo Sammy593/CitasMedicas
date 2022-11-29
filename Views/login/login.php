@@ -1,6 +1,6 @@
 <?php
-  /* $funcionUrl = shortener("login");
-  require_once($funcionUrl); */
+  $funcionUrl = funcionesBack("login");
+  require_once($funcionUrl);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -38,7 +38,7 @@
             <!--Imagen del icono del Agendamiento de Citas -->
             <div class="d-flex justify-content-center">
               <img
-                src="<?php //echo media(); ?> Assets/img/imgLogin/LogotipoLogin.png"
+                src="<?php echo media(); ?>/img/imgLogin/LogotipoLogin.png"
                 alt="Perfil_Usuario"
                 style="height: 20rem"
               />
@@ -53,7 +53,7 @@
   <!--Imagen del icono del login -->
   <div class="d-flex justify-content-center">
     <img
-      src="<?php //echo media(); ?> Assets/img/imgLogin/Perfil_Usuario.png"
+      src="<?php echo media(); ?>/img/imgLogin/Perfil_Usuario.png"
       alt="Perfil_Usuario"
       style="height: 7rem"
     />
@@ -71,7 +71,7 @@
           <div class="input-group mt-4">
             <div class="input-group-text bg-info">
               <img
-                src=" <?php //echo media(); ?> Assets/img/imgLogin/username-icon.svg"
+                src="<?php echo media(); ?>/img/imgLogin/username-icon.svg"
                 alt="username-icon"
                 style="height: 1rem"
               />
@@ -91,7 +91,7 @@
           <div class="input-group mt-1">
             <div class="input-group-text bg-info">
               <img
-                src="<?php //echo media(); ?> Assets/img/imgLogin/password-icon.svg"
+                src="<?php echo media(); ?>/img/imgLogin/password-icon.svg"
                 alt="password-icon"
                 style="height: 1rem"
               />
@@ -122,7 +122,6 @@
              
           </div>
         </tr>
-      
       </table>
     </form>
   </div>

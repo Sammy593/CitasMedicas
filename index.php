@@ -1,32 +1,29 @@
 <?php
-     require_once("config.php");
-     require_once("libraries/load.php");
-     require_once("helpers/routes_shortener.php");
-     require_once("helpers/search_option.php");
-     require_once("helpers/media_urls.php");
+     require_once("Config/Config.php");
+     require_once("Helpers/Helpers.php");
 
-
-     if(isset($_REQUEST['url'])) {
-          $url = explode("/", $_GET["url"]);
-          if (!file_exists("views/".$url[0])) {
-               include(importView("error"));
-               return;
-          } 
-
-          if (count($url) == 1) {
-               include(importView($url[0]));  
-               return;
-          } 
-
-          $opt_exists = search_option($url[1]);
-          if ($url[0] == "dashboard" && count($url) == 2 && $opt_exists["exists"]) {
-              include($opt_exists["route"]);
-              return;
-          }
-
-          include(importView("error"));
-
-     } else {
-          include('views/login/index.php');
+     $url = !empty($_GET['url']) ? $_GET['url'] : 'login/login';
+     $arrUrl = explode("/",$url);
+     $folder = $arrUrl[0];
+     
+     if(!empty($arrUrl[1])){
+          $view = $arrUrl[1];
+     }else{
+          $view = $arrUrl[0];
      }
+
+     
+     /*$params = "";
+
+     if(!empty($arrUrl[2])){
+          if($arrUrl[2] != ""){
+               for($i=2; $i < count($arrUrl); $i++){
+                    $params .= $arrUrl[$i].',';
+               }
+               $params = trim($params,",");
+          }
+     }*/
+
+     //Load
+     require_once("Libraries/Load.php");
 ?>

@@ -1,13 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="vistas.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <title>Doctores</title>
-</head>
+<?php
+    include_once('Views/template/head.php');
+?>
 <body>
     <!-- Foto del doctor -->
     <div class="topBar">
@@ -21,6 +16,9 @@
     <!-- Fin foto del doctor -->
 
     <div class="options">
+    <?php
+        include_once('Views/template/aside.php');
+    ?>
         <form>
             <label for="" class="title-form">Nueva aula</label>
             <div class="section-block">
