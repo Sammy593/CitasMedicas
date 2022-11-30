@@ -27,23 +27,25 @@ if(isset($user)){
     //controlar si llegan datos desde la consulta
     if($fila['id']==null){
         //redirigir al login
-      //  header("location:../index.php");
-    }else{
+        header("location: ../");
+    }else{ 
         //crear la seccion 
         session_start();
 
         //definir las variables de seccion y redirigimos a una pagina de usuario
         $_SESSION['id']=$fila['id'];
         $_SESSION['nombre']=$fila['usuario'];
+        $_SESSION['persona_id']=$fila['persona_id'];
+        $_SESSION['rol_id']=$fila['rol_id'];
 
         // AQUI ME DEBE REDIRIGIR A LA PAGINA PRINCIPAL LUEGO DE ACCEDER DEL LOGIN 
-        //header("location:../Views/dashboard/inicio.php");
+        header("location: ../dashboard/");
 
     }
 
 }else{
     //se redirige al mismo login 
-  //  header("location:../index.php");
+  header("location: ../");
 
 }
 
