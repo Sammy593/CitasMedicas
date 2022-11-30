@@ -1,6 +1,6 @@
 <?php
-  $funcionUrl = funcionesBack("login");
-  require_once($funcionUrl);
+$funcionUrl = funcionesBack('login');
+require_once $funcionUrl;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -60,7 +60,7 @@
   </div>
   <!--Div y Formulario -->
   <div>
-    <form action="accesoUsuarios.php" method="post">
+    <form action="Controllers/Login.php" method="post" >
       <table>
         <tr>
           <!--titulo -->
