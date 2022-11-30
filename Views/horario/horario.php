@@ -2,18 +2,15 @@
     include_once('Views/template/head.php');
 ?>
 <body>
-<?php
-   include_once('Views/template/aside.php');
-?>
 <main>
-
+<?php
+    include_once('Views/template/aside.php');
+?>
     <div>Holaaa</div>
-    <!--AGREGAR AQUI VA TODO EL FORMULARIO -->
-
-
 </main>
 
 </body>
+
 
 <?php
     include_once('Views/template/scripts.php');
