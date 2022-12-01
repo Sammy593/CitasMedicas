@@ -1,15 +1,19 @@
 <?php
-    include_once('Views/template/head.php');
+include_once('../template/head.php');
 ?>
-<body>
-    
-</body>
-<main>
+<div>
+
+</div>
+
+
 <?php
-    include_once('Views/template/aside.php');
+include_once('../template/aside.php');
 ?>
-    <div>Holaaa</div>
-</main>
+<div class="fondoVozandes">
+
+</div>
+
+</div>
 <?php
-    include_once('Views/template/scripts.php');
+include_once('../template/scripts.php');
 ?>
