@@ -20,15 +20,16 @@ echo '<script>
 ?>
 
 <?php
-    headPath();
+headPath();
 ?>
 
 <?php
-    asidePath();
+asidePath();
 ?>
-    
-    <h2 class="titulo"> Personas registradas </h2>
-    <h4> <a class="btn" href="Views/personas/AggPersonasView.php" class="agregar"> Ingresar persona </a></h4>
+
+<h2 class="titulo"> Personas registradas </h2>
+<h4> <a class="btn" href="Views/personas/AggPersonasView.php" class="agregar"> Ingresar persona </a></h4>
+<div class="subOptions">
     <table class="table">
         <thead>
             <tr>
@@ -54,7 +55,7 @@ echo '<script>
                     echo ("<td> " . $row['telefono'] . "</td>");
                     echo ("<td> " . $row['sexo'] . "</td>");
                     echo ("<td>");
-                    echo ("<a class='btn' href='LecPersonasView/". $row['id'] . "'> Leer </a>");
+                    echo ("<a class='btn' href='LecPersonasView/" . $row['id'] . "'> Leer </a>");
                     echo ("<a class='btn' href='ActPersonasView/" . $row['id'] . "'> Actualizar </a>");
                     echo ("<a onclick='return alerta();' class='btn' href='EliPersonasView/" . $row['id'] . "'> Eliminar </a>");
                     echo ("</td>");
@@ -66,7 +67,7 @@ echo '<script>
         </tbody>
 
     </table>
-
+</div>
 <?php
-    scriptsPath();
+scriptsPath();
 ?>
