@@ -1,63 +1,61 @@
 <?php
-  $funcionUrl = funcionesBack("citas");
-  require_once($funcionUrl);
+include_once('Views/template/head.php');
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<?php headPath($data); ?>
-<body class="sidebar-mini layout-fixed layout-navbar-fixed">
-<div class="wrapper">
-  <!-- Main Sidebar Container   (aside)-->
-  <?php asidePath($data); ?>
 
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <div class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1 class="m-0 mb-1"> Agendar citas</h1>
-            <button class="btn btn-primary" type="button"><i class="fas fa-plus-circle"></i> Nuevo</button>
-          </div><!-- /.col -->
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>/dashboard">Home</a></li>
-              <li class="breadcrumb-item active">Citas</li>
-            </ol>
-          </div><!-- /.col -->
-        </div><!-- /.row -->
-      </div><!-- /.container-fluid -->
-    </div>
-    <!-- /.content-header -->
+<?php
+include_once('Views/template/aside.php');
+?>
 
-    <!-- Main content -->
-    <div class="content">
-      <div class="container-fluid">
-        <div class="card">
-                <div class="card-header">
-                  <h3 class="card-title">Cita</h3>
-                </div>
+<!-- Espacio para colocar los formularios -->
+<div class="subBody">
+  <div class="subOptions">
+  <div class="centro">
+            <h2>Platos en menú</h2>
+            
+            <table class="table table-dark">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre del plato</th>
+                        <th>Descripción</th>
+                        <th>Precio</th>
+                        <th>Acción</th>
 
-                <!-- /.card-header -->
-                <div class="card-body">
-                 <h3>Samuel</h3>
-                </div>
-                <!-- /.card-body -->
-         </div>
-       </div>
-    </div>
-    <!-- /.content -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    // Control sobre la consulta
+                    if ($result->num_rows > 0) {
+                        // Recorre la matriz asociativa
+                        while ($row = $result->fetch_assoc()) {
+                            echo '<tr>';
+                            echo '<td>' . $row['id_plato'] . '</td>';
+                            echo '<td>' . $row['nombre_Plato'] . '</td>';
+                            echo '<td>' . $row['descripcion_Plato'] . '</td>';
+                            echo '<td>' . $row['precio_Plato'] . '</td>';
+                            echo '<td>';
+                            // Para pasar parametro
+                            echo '<a href="views/read.php?id=' . $row['id_plato'] . '"> Leer </a>';
+                            echo '<a href="views/actualizar.php?id=' . $row['id_plato'] . '"> Actualizar </a>';
+                            echo '</td>';
+                            echo '</tr>';
+                        }
+                        $result->free();
+                    } else {
+                        echo '<p><em> No existe datos registardos </em></p>';
+                    }
+                    ?>
+                </tbody>
+            </table>
+        </div>
   </div>
+</div>
+<!-- Fin del espacio para colocar los formularios -->
 
-  <footer>
-
-  </footer>
+<!-- div que cierra la grilla -->
 </div>
 
-
-<!-- REQUIRED SCRIPTS -->
-<?php scriptsPath($data); ?>
-
-</body>
-</html>
+<?php
+include_once('Views/template/scripts.php');
+?>
