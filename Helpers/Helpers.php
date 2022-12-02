@@ -18,7 +18,7 @@
     //Retorna ruta para archivos de Views
     function views(){
         return BASE_URL."/Views";
-   }
+    }
    
     //Templates html
     function headPath($data=""){
