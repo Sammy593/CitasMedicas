@@ -1,5 +1,7 @@
 <?php
-require_once('conexion/conexion.php');
+require_once('../conexion/conexion.php');
+
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   if (
     isset($_POST['DNI']) && isset($_POST['nombres'])
@@ -7,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     && isset($_POST['telefono']) && isset($_POST['sexo']) && isset($_POST['fechanacimiento'])
     && isset($_POST['fecharegistro']) && isset($_POST['fechamodificación']) && isset($_POST['estado'])
   ) {
-    $query = "INSERT INTO pacientes(DNI, nombres, apellidos, direccion, telefono, sexo,f echanacimiento, fecharegistro, fechamodificacion, estado) VALUES (?,?,?,?,?,?,?,?,?,?)";
+    $query = "INSERT INTO pacientes(DNI, nombres, apellidos, direccion, telefono, sexo, fechanacimiento, fecharegistro, fechamodificacion, estado) VALUES (?,?,?,?,?,?,?,?,?,?)";
     if ($_POST['estado'] == "true") {
       $estado = true;
     } else {
@@ -16,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if ($stmt = $conn->prepare($query)) {
       $stmt->bind_param(
-        "sssssssss",
+        "sssssssssi",
         $_POST['DNI'],
         $_POST['nombres'],
         $_POST['apellidos'],
@@ -30,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       );
 
       if ($stmt->execute()) {
-        header("location: Views/paciente/agregarPacienteF");
+        header("location: ../paciente");
         exit();
       } else {
         echo "Error, el statemet no se ejecutó";
