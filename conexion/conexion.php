@@ -1,6 +1,7 @@
 <?php
 //Datos para la conexión a la base de datos
-define("SERVERNAME", "localhost");
+//define("SERVERNAME", "localhost");
+define("SERVERNAME", "localhost:3308");
 //En caso de cambiar de puerto
 //define("SERVERNAME", "localhost:3307");
 define("USERNAME", "root");

@@ -1,22 +1,22 @@
 <?php
-require_once '../conexion/conexion.php';
+require_once 'conexion/conexion.php';
 
 //Leer los datos y visualizarlos en los cuadros de texto para su edición
-if(isset($_GET['id']) && !empty(trim($_GET['id']))){
+if(isset($params) && !empty(trim($params))){
     $query = 'SELECT * FROM Personas WHERE id = ?';
     if($stmt = $conn->prepare($query)){
-        $stmt -> bind_param('i', $_GET['id']);
+        $stmt -> bind_param('i', $params);
         if($stmt->execute()){
             $resultado = $stmt -> get_result();
             if($resultado -> num_rows == 1){
                 $row = $resultado -> fetch_array(MYSQLI_ASSOC);
-                $DNI = $row['nombreusuario'];
-                $nombres = $row['apellidousuario'];
-                $apellidos = $row['cedulausuario'];
-                $direccion = $row['telefonousuario'];
-                $correo = $row['direccionusuario'];
-                $telefono = $row['correousuario'];
-                $sexo = $row['correousuario'];
+                $DNI = $row['DNI'];
+                $nombres = $row['nombres'];
+                $apellidos = $row['apellidos'];
+                $direccion = $row['direccion'];
+                $correo = $row['correo'];
+                $telefono = $row['telefono'];
+                $sexo = $row['sexo'];
             }else{
                 echo('Error! No existen resultados para esta consulta');
                 exit();
@@ -28,7 +28,7 @@ if(isset($_GET['id']) && !empty(trim($_GET['id']))){
     }
     $stmt -> close();
 }else{
-    header("location: ../Controlador/index.php");
+    header("location: IndPersonasView");
     exit();
 }
 
