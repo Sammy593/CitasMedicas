@@ -1,13 +1,13 @@
 <?php
-require_once('conexion.php');
+require_once("Controllers/leerPacienteB.php");
 ?>
 
 <?php
-include_once('./template/head.php');
+include_once('Views/template/head.php');
 ?>
 
 <?php
-include_once('./template/aside.php');
+include_once('Views/template/aside.php');
 ?>
 
 <div class="subBody">
@@ -34,10 +34,22 @@ include_once('./template/aside.php');
       <p> <?php echo $sexo; ?> </p>
     </div>
     <div>
-      <a href="paciente.php"> Volver </a>
+      <label for=""> Fecha de Nacimiento </label>
+      <p> <?php echo $fechaN; ?> </p>
+    </div>
+    <div>
+      <label for=""> Fecha de Registro </label>
+      <p> <?php echo $fechaR; ?> </p>
+    </div>
+    <div>
+      <label for=""> Fecha de Modificación </label>
+      <p> <?php echo $fechaM; ?> </p>
+    </div>
+    <div>
+      <a href="../"> Volver </a>
     </div>
   </div>
 </div>
 <?php
-include_once('./template/scripts.php');
+include_once('Views/template/scripts.php');
 ?>
