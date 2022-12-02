@@ -18,7 +18,7 @@ include_once('Views/template/aside.php');
         <div class="currentPeriod"></div>
     </div>
     <div class="subOptions">
-        <form>
+        <form class="subTables">
             <label for="" class="title-form">Nueva especialidad</label>
             <div class="section-block">
                 <label for="">Descripción</label>
@@ -51,7 +51,7 @@ include_once('Views/template/aside.php');
 
     <div class="update-modal hidden">
         <div class="exit-icon">X</div>
-        <form>
+        <form class="subTables">
             <label for="" class="title-form">Modificar especialidad</label>
             <input type="hidden" name="id">
             <div class="section-block">
