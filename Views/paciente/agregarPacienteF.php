@@ -1,16 +1,16 @@
 <?php
-include_once('./template/head.php');
+include_once('Views/template/head.php');
 ?>
 
 <?php
-include_once('./template/aside.php');
+include_once('Views/template/aside.php');
 ?>
 
 <div class="subBody">
   <h2> Agregar nuevo paciente </h2>
   <p> Llene los datos del paciente</p>
   <div class="subOptions">
-    <form action="../../Controllers/agregarPacienteB.php" method="post" class="subOptions">
+    <form action="../Controllers/agregarPacienteB.php" method="post">
       <div>
         <label for="DNI"> DNI </label>
         <input type="text" name="DNI" required>
@@ -51,7 +51,7 @@ include_once('./template/aside.php');
         <input type="date" name="fechamodificacion" required>
       </div>
       <div>
-        <label for="estado"> Estado </label>
+        <label for=""> Estado </label>
         <select name="estado">
           <option value="true"> Activo </option>
           <option value="false">Inactivo</option>
@@ -59,12 +59,12 @@ include_once('./template/aside.php');
       </div>
       <div>
         <input type="submit" value="Registrar Paciente">
-        <a href="./paciente.php"> Cancelar </a>
+        <a href="paciente"> Cancelar </a>
       </div>
     </form>
   </div>
 </div>
 
 <?php
-include_once('../template/scripts.php');
+include_once('Views/template/scripts.php');
 ?>

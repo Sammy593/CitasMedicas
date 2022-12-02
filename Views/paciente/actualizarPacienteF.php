@@ -1,39 +1,40 @@
 <?php
-require_once('conexion.php');
+$funcionUrl = funcionesBack("actualizarPacienteB");
+require_once($funcionUrl);
 ?>
 
 <?php
-include_once('./template/head.php');
+include_once('Views/template/head.php');
 ?>
 
 <?php
-include_once('./template/aside.php');
+include_once('Views/template/aside.php');
 ?>
 
 <div class="subBody">
   <h2> Modificar y Actualizar Paciente </h2>
   <p> Llene los campos solicitados</p>
   <div class="subOptions">
-    <form action="../../Controllers/actualizarPacienteB.php" method="post">
+    <form action="" method="post">
       <div>
         <label for="DNI"> DNI </label>
-        <input type="text" name="DNI" required>
+        <input type="text" name="DNI" value="<?php echo ($DNI) ?>" required>
       </div>
       <div>
         <label for="nombres"> Nombres </label>
-        <input type="text" name="nombres" required>
+        <input type="text" name="nombres" value="<?php echo ($nombres) ?>" required>
       </div>
       <div>
         <label for="apellidos"> Apellidos </label>
-        <input type="text" name="apellidos" required>
+        <input type="text" name="apellidos" value="<?php echo ($apellidos) ?>" required>
       </div>
       <div>
         <label for="direccion"> Dirección </label>
-        <input type="text" name="direccion" required>
+        <input type="text" name="direccion" value="<?php echo ($direccion) ?>" required>
       </div>
       <div>
         <label for="telefono"> Telefono </label>
-        <input type="text" name="telefono" required>
+        <input type="text" name="telefono" value="<?php echo ($telefono) ?>" required>
       </div>
       <div>
         <label for="sexo"> Sexo </label>
@@ -41,10 +42,6 @@ include_once('./template/aside.php');
           <option value="M">Masculino</option>
           <option value="F">Femenino</option>
         </select>
-      </div>
-      <div>
-        <label for="fechanacimiento"> Fecha de Nacimiento </label>
-        <input type="date" name="fechanacimiento" required>
       </div>
       <div>
         <label for="estado"> Estado </label>
@@ -55,12 +52,12 @@ include_once('./template/aside.php');
       </div>
       <div>
         <input type="submit" value="Actualizar Paciente">
-        <a href="paciente.php"> Cancelar </a>
+        <a href="../"> Cancelar </a>
       </div>
 
     </form>
   </div>
 </div>
 <?php
-scriptsPath();
+include_once('Views/template/scripts.php');
 ?>
