@@ -1,5 +1,5 @@
 <?php
-require_once('../conexion/conexion.php');
+require_once('conexion/conexion.php');
 //Verificar si los datos fueron enviados por el metodo post
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
     //Vrificar que

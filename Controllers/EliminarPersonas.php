@@ -1,9 +1,9 @@
 <?php
-if(isset($_GET['id']) && !empty(trim($_GET['id']))){
-    require_once '../conexion/conexion.php';
+if(isset($params) && !empty(trim($params))){
+    require_once 'conexion/conexion.php';
     $query = "DELETE FROM Personas WHERE id = ?";
     if($stmt = $conn -> prepare($query)){
-        $stmt -> bind_param('i',$_GET['id']);
+        $stmt -> bind_param('i',$params);
         if($stmt -> execute()){
             header('location:../Vista/principal.php');
             exit();
