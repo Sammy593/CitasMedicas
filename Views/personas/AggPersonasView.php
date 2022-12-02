@@ -40,6 +40,10 @@ a{
 }
 </style>
 
+<?php
+    $funcionUrl = funcionesBack("queryRoles");
+    require_once($funcionUrl);
+?>
 
 <div>
     <div class="subBody">
@@ -86,6 +90,26 @@ a{
                     <select name="estado">
                         <option value="true"> Activo </option>
                         <option value="false">Inactivo</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="direccion"> Usuario</label>
+                    <input type="text" name="direccion" required>
+                </div>
+                <div>
+                    <label for="direccion"> Contraseña</label>
+                    <input type="password" name="direccion" required>
+                </div>
+                <div>
+                    <label for="direccion"> Rol </label>
+                    <select>
+                        <?php
+                            if ($resultado->num_rows > 0) {
+                                while ($row = $resultado->fetch_assoc()) {
+                                    echo("<option value=".$row['id'].">".$row['descripcion']."</option>");
+                                }
+                            }
+                        ?>
                     </select>
                 </div>
                 <div>

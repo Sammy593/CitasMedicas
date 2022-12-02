@@ -8,8 +8,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
      && isset($_POST['correo']) && isset($_POST['telefono']) && isset($_POST['sexo'])
      && isset($_POST['estado'])){
         //Construir la consulta
-        $query = "INSERT INTO Personas(DNI,nombres,apellidos,direccion,correo,telefono,
-        sexo,estado) VALUES (?,?,?,?,?,?,?,?)";
+        $query = "INSERT INTO Personas(DNI,nombres,apellidos,direccion,correo,telefono,sexo,estado) VALUES (?,?,?,?,?,?,?,?)";
+        
         if($_POST['estado'] == "true"){
             $estado = true;
         }else{
