@@ -56,9 +56,14 @@ echo '<script>
 </style>
 
 <div class="subBody">
-  <div class="topBar">
-    <h2 class="titulo"> Pacientes Registrados </h2>
-  </div>
+<div class="topBar">
+        <h2 class="title-view">Pacientes registrados</h2>
+        <div class="auth">
+            <div id="user-logged"></div>
+            <img src="<?php echo(media())?>/img/imgLogin/logotipoLogin.png" alt="img-user" id="user-img" class="card">
+        </div>
+        <div class="currentPeriod"></div>
+    </div>
   <div class="subOptions">
     <h4> <a class="btn" href="agregarPacienteF"> Agregar Paciente </a></h4>
     <table class="table">

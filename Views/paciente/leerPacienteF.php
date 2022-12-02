@@ -73,8 +73,15 @@ include_once('Views/template/aside.php');
 </style>
 
 <div class="subBody">
+  <div class="topBar">
+    <h2 class="title-view">Datos del Paciente</h2>
+    <div class="auth">
+      <div id="user-logged"></div>
+      <img src="<?php echo (media()) ?>/img/imgLogin/logotipoLogin.png" alt="img-user" id="user-img" class="card">
+    </div>
+    <div class="currentPeriod"></div>
+  </div>
   <div class="subOptions">
-    <h1> Datos del Paciente </h1>
     <div class="row">
       <label for=""> DNI </label>
       <p> <?php echo $DNI ?> </p>

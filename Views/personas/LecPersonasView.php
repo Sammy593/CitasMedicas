@@ -19,7 +19,7 @@ asidePath();
         margin: 0 auto;
         margin-top: 20px;
         background-color: rgba(1,1,1,0.3);
-        text-align: center;
+        text-align: justify;
     }
 
     .card:hover{
@@ -54,19 +54,19 @@ asidePath();
         background-color: rgba(200,10,10,0.8);
     }
 
-    a{
-        text-decoration: none;
-        color: white;
-        font-size: 25px;
-    }
-
 </style>
 
 <div class="subBody">
-    <div class="subOptions">
-        <div class="topBar">
-            <h1 class="title-view"> Datos del usuario </h1>
+<div class="topBar">
+        <h2 class="title-view">Datos del usuario</h2>
+        <div class="auth">
+            <div id="user-logged"></div>
+            <img src="<?php echo(media())?>/img/imgLogin/logotipoLogin.png" alt="img-user" id="user-img" class="card">
         </div>
+        <div class="currentPeriod"></div>
+    </div>
+    <div class="subOptions">
+
         <div class="card">
             <div class="card-item">
                 <label for=""> DNI </label>

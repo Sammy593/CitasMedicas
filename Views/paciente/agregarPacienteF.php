@@ -92,8 +92,14 @@ include_once('Views/template/aside.php');
 </style>
 
 <div class="subBody">
-  <h2> Agregar nuevo paciente </h2>
-  <p> Llene los datos del paciente</p>
+  <div class="topBar">
+    <h2 class="title-view">Agregar nuevo paciente</h2>
+    <div class="auth">
+      <div id="user-logged"></div>
+      <img src="<?php echo (media()) ?>/img/imgLogin/logotipoLogin.png" alt="img-user" id="user-img" class="card">
+    </div>
+    <div class="currentPeriod"></div>
+  </div>
   <div class="subOptions">
     <form action="../Controllers/agregarPacienteB.php" method="post">
       <div class="row">

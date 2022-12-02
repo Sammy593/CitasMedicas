@@ -97,8 +97,14 @@ include_once('Views/template/aside.php');
 </style>
 
 <div class="subBody">
-  <h2> Modificar y Actualizar Paciente </h2>
-  <p> Llene los campos solicitados</p>
+  <div class="topBar">
+    <h2 class="title-view">Modificar y Actualizar Paciente</h2>
+    <div class="auth">
+      <div id="user-logged"></div>
+      <img src="<?php echo (media()) ?>/img/imgLogin/logotipoLogin.png" alt="img-user" id="user-img" class="card">
+    </div>
+    <div class="currentPeriod"></div>
+  </div>
   <div class="subOptions">
     <form action="" method="post">
       <div class="row">

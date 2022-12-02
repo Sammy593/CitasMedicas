@@ -10,9 +10,12 @@ include_once('Views/template/aside.php');
 <!-- Espacio para colocar los formularios -->
 
 <div class="subBody">
-    <div class="topBar">
-        <h2 class="title-view">HORARIOS </h2>
-        
+<div class="topBar">
+        <h2 class="title-view">Horario</h2>
+        <div class="auth">
+            <div id="user-logged"></div>
+            <img src="<?php echo(media())?>/img/imgLogin/logotipoLogin.png" alt="img-user" id="user-img" class="card">
+        </div>
         <div class="currentPeriod"></div>
     </div>
     <div class="subOptions">
@@ -20,19 +23,23 @@ include_once('Views/template/aside.php');
             <label for="" class="title-form">Nuevo Horario</label>
             <div class="section-block">
                 <label for="fechadatencion">Fecha Atención</label>
-                <input type="text" name="fechadatencion"  required>
+                <input type="date" name="fechadatencion"  required>
             </div>
             <div class="section-block">
                 <label for="inicioatencion">Inicio Atención</label>
-                <input type="text" name="inicioatencion"  required>
+                <input type="time" name="inicioatencion"  required>
             </div>
             <div class="section-block">
                 <label for="finatencion">Fin Atención</label>
-                <input type="text" name="finatencion" required>
+                <input type="time" name="finatencion" required>
             </div>
             <div class="section-block">
-                <label for="medico_id">Médico Identificación</label>
-                <input type="text" name="medico_id" required>
+                <label for="medico_id">Id Médico</label>
+                <select name="medico_id" id="medico_id">
+                    <option value="">Seleccionar</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                </select>
             </div>
       
             <div class="section-block">
@@ -53,10 +60,12 @@ include_once('Views/template/aside.php');
        <table >
            <thead>
                <tr>
-                   <th id="th1" >FECHA ATENCIÓN</th>
-                   <th id="th1">INICIO ATENCIÓN</th>
-                   <th id="th1">FIN ATENCIÓN</th>
-                   <th id="th1">ACCIÓN</th>
+                   <th id="th1" >Fecha atención</th>
+                   <th id="th1">Fecha atención</th>
+                   <th id="th1">Fin atención</th>
+                   <th id="th1">Id Médico</th>
+                   <th id="th1">Estado</th>
+                   <th id="th1">Acción</th>
                </tr>
            </thead>
            <tbody>
@@ -83,7 +92,7 @@ include_once('Views/template/aside.php');
    
                    //construye la consulta
                    $query =
-                       'SELECT id,fechadatencion, inicioatencion, finatencion, activo FROM horario';
+                       'SELECT id,fechadatencion, inicioatencion, finatencion, medico_id, activo FROM horario';
                    $result = $conn->query($query);
    
                if ($result->num_rows > 0) {
@@ -92,6 +101,7 @@ include_once('Views/template/aside.php');
                        echo '<td> ' . $row['fechadatencion'] . '</td>';
                        echo '<td> ' . $row['inicioatencion'] .'</td>';
                        echo '<td> ' . $row['finatencion'] . '</td>';
+                       echo '<td> ' . $row['medico_id'] . '</td>';
                        echo '<td> ' . $row['activo'] . '</td>';
                        echo '<td>';
    

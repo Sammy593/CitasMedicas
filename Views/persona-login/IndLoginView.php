@@ -17,7 +17,6 @@ echo '<script>
                             header("location: home.php");
                         }
                     }
-                    
                     </script>';
 
 
@@ -26,98 +25,101 @@ echo '<script>
 asidePath();
 ?>
 <style>
-th{
-    padding: 5px;
-    font-size: 20px;
-    background-color: rgba(5,170,170,0.9);
-}
-td{
-    padding: 5px;
-    text-align: center;
-}
+    th {
+        padding: 5px;
+        font-size: 20px;
+        background-color: rgba(5, 170, 170, 0.9);
+    }
 
-tr:nth-child(even){
-    background-color: rgba(1,1,1,0.2);
-}
+    td {
+        padding: 5px;
+        text-align: center;
+    }
 
-tr:hover{
-    background-color: rgba(3,3,3,0.4);
-}
+    tr:nth-child(even) {
+        background-color: rgba(1, 1, 1, 0.2);
+    }
+
+    tr:hover {
+        background-color: rgba(3, 3, 3, 0.4);
+    }
 
 
-.boton{
-    width:150px;
-    height:40px;
-    background-color:rgba(5,170,170,0.8);
-    margin-bottom: 10px;
-}
+    .boton {
+        width: 150px;
+        height: 40px;
+        background-color: rgba(5, 170, 170, 0.8);
+        margin-bottom: 10px;
+    }
 
-a{
-    text-decoration: none;
-    color:black;
-}
+    a {
+        text-decoration: none;
+        color: black;
+    }
 
-.opc{
-    width:70px;
-    height:30px;
-    background-color:rgba(5,170,170,0.8);
-    margin-left: 2px;
-    margin-right: 2px;
-}
+    .opc {
+        width: 70px;
+        height: 30px;
+        background-color: rgba(5, 170, 170, 0.8);
+        margin-left: 2px;
+        margin-right: 2px;
+    }
 
-.link{
-    color: blue;
-}
-
+    .link {
+        color: blue;
+    }
 </style>
 
-
-
-<div style="margin-top:200px;">
-    <div class="subBody">
-        <div class="topBar">
-            <h2 class="title-view"> Usuarios registrados </h2> <br>
+<div class="subBody">
+    <div class="topBar">
+        <h2 class="title-view">Usuarios registrados</h2>
+        <div class="auth">
+            <div id="user-logged"></div>
+            <img src="<?php echo (media()) ?>/img/imgLogin/logotipoLogin.png" alt="img-user" id="user-img" class="card">
         </div>
+        <div class="currentPeriod"></div>
+    </div>
 
-        <div class="subOptions">
-            <button class="boton"><a href="AggLoginView" class="agregar"> Ingresar usuario </a> </button>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th> Usuario </th>
-                        <th> Contraseña </th>
-                        <th> Persona </th>
-                        <th> Rol </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php
-                    //Control sobre la consulta
-                    if ($resultado->num_rows > 0) {
-                        while ($row = $resultado->fetch_assoc()) {
-                            //Recorrer la matriz asociativa
-                            echo ("<tr>");
-                            echo ("<td> " . $row['usuario'] . "</td>");
-                            echo ("<td> " . $row['contrasenia'] . "</td>");
-                            echo ("<td> <a class='link' href=../personas/LecPersonasView/" . $row['persona_id'] . "> Click para ver </a></td>");
-                            $queryrol = "SELECT * FROM Roles WHERE id=".$row["rol_id"];
-                            $resultado2 = $conn->query($queryrol);
-                            $rol = $resultado2->fetch_assoc();
-                            echo ("<td> " . $rol['descripcion']. "</td>");
-                            echo ("<td>");
-                            echo ("<button class='opc'> <a onclick='return alerta();' href='EliLoginView/" . $row['id'] . "'> Eliminar </a> </button>");
-                            echo ("</td>");
-                            echo ("</tr>");
-                        }
+    <div class="subOptions">
+        <button class="boton"><a href="AggLoginView" class="agregar"> Ingresar usuario </a> </button>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th> Usuario </th>
+                    <th> Contraseña </th>
+                    <th> Persona </th>
+                    <th> Rol </th>
+                    <th> Acción </th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                //Control sobre la consulta
+                if ($resultado->num_rows > 0) {
+                    while ($row = $resultado->fetch_assoc()) {
+                        //Recorrer la matriz asociativa
+                        echo ("<tr>");
+                        echo ("<td> " . $row['usuario'] . "</td>");
+                        echo ("<td> " . $row['contrasenia'] . "</td>");
+                        echo ("<td> <a class='link' href=../personas/LecPersonasView/" . $row['persona_id'] . "> Click para ver </a></td>");
+                        $queryrol = "SELECT * FROM Roles WHERE id=" . $row["rol_id"];
+                        $resultado2 = $conn->query($queryrol);
+                        $rol = $resultado2->fetch_assoc();
+                        echo ("<td> " . $rol['descripcion'] . "</td>");
+                        echo ("<td>");
+                        echo ("<button class='opc'> <a onclick='return alerta();' href='EliLoginView/" . $row['id'] . "'> Eliminar </a> </button>");
+                        echo ("</td>");
+                        echo ("</tr>");
                     }
+                }
 
-                    ?>
-                </tbody>
+                ?>
+            </tbody>
 
-            </table>
-        </div>
+        </table>
     </div>
 </div>
+
 <?php
 scriptsPath();
 ?>

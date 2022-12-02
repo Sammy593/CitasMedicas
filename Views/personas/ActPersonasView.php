@@ -12,48 +12,51 @@ asidePath();
 ?>
 
 <style>
+    .formulario {
+        margin: 0 auto;
+        margin-top: 30px;
+        background-color: rgba(5, 170, 170, 0.8);
+    }
 
-.formulario{
-    margin: 0 auto;
-    margin-top: 30px;
-    background-color: rgba(5,170,170,0.8);
-}
+    label {
+        text-align: left;
+        margin-right: 10px;
+        font-weight: bold;
+    }
 
-label{
-    text-align: left;
-    margin-right: 10px;
-    font-weight: bold;
-}
+    .envio {
+        width: 150px;
+        height: 40px;
+        background-color: rgba(5, 170, 170, 0.8);
+        margin-bottom: 10px;
+    }
 
-.envio{
-    width:150px;
-    height:40px;
-    background-color:rgba(5,170,170,0.8);
-    margin-bottom: 10px;
-}
+    .cancelar {
+        width: 80px;
+        height: 32px;
+        background-color: rgba(200, 10, 10, 0.8);
+        margin-bottom: 10px;
+    }
 
-.cancelar{
-    width:80px;
-    height:32px;
-    background-color:rgba(200,10,10,0.8);
-    margin-bottom: 10px;
-}
-
-a{
-    text-decoration: none;
-    color: white;
-}
+    a {
+        text-decoration: none;
+        color: white;
+    }
 </style>
 
 
 <div>
     <div class="subBody">
         <div class="topBar">
-            <h2 class="title-view"> Agregar un nuevo usuario </h2>
-            <p class="title-view"> Llene los campos solicitados</p>
+            <h2 class="title-view">Agregar un nuevo usuario</h2>
+            <div class="auth">
+                <div id="user-logged"></div>
+                <img src="<?php echo (media()) ?>/img/imgLogin/logotipoLogin.png" alt="img-user" id="user-img" class="card">
+            </div>
+            <div class="currentPeriod"></div>
         </div>
         <div class="subOptions">
-            <form action="" method="post" class="formulario">
+            <form class="subTables" action="" method="post" class="formulario">
                 <div>
                     <label for="DNI"> DNI </label>
                     <input type="text" name="DNI" value="<?php echo ($DNI) ?>" required>

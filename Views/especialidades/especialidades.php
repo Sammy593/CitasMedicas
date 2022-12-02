@@ -13,7 +13,7 @@ include_once('Views/template/aside.php');
         <h2 class="title-view">Especialidades</h2>
         <div class="auth">
             <div id="user-logged"></div>
-            <img src="/Assets/img/imgLogin/LogotipoLogin.png" alt="img-user" id="user-img" class="card">
+            <img src="<?php echo(media())?>/img/imgLogin/logotipoLogin.png" alt="img-user" id="user-img" class="card">
         </div>
         <div class="currentPeriod"></div>
     </div>
