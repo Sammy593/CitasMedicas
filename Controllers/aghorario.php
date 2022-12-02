@@ -1,5 +1,5 @@
 <?php
-require_once('../conexion/conexion.php');
+require_once('conexion/conexion.php');
 //Verificar si los datos fueron enviados por el metodo post
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
     //Vrificar que
@@ -9,7 +9,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         //Construir la consulta
         $query = "INSERT INTO horario(fechadatencion,inicioatencion,finatencion,activo,medico_id) 
         VALUES (?,?,?,?,?)";
-        if($_POST['activo'] == "true"){
+        if($_POST['activo'] == "true"){ 
             $activo = true;
         }else{ 
             $activo = false;
@@ -22,7 +22,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
              //Ejecutar statemet
              if($stmt -> execute()){
-                header("location: ../horario/horario");
+                header("location: horario/horario");
                 exit();
              }else{
                 echo "Error, el statemet no se ejecutó";
