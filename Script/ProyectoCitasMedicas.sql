@@ -79,7 +79,7 @@ CREATE TABLE Citas(
     id int primary key auto_increment,
     paciente_id int not null,
     horario_id int not null,
-    estado varchar(1) not null,
+    estado varchar(100) not null,
     activo boolean not null,
     foreign KEY (paciente_id) references Pacientes(id),
     foreign KEY (horario_id) references horario(id)

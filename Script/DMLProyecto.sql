@@ -87,10 +87,10 @@ select * from Pacientes;
 -- *******************************************
 
 -- estado - A-Activo   D-Desactivo
-insert into Citas (paciente_id, persona_id,estado,fechacita,fechaatencion,activo) 
-values ('1', '1','A','2022-05-20 14:15:10','2022-05-21 14:15:10','1'); 
-insert into Citas (paciente_id, persona_id,estado,fechacita,fechaatencion,activo) 
-values ('2', '2','A','2022-06-20 13:15:10','2022-06-21 13:15:10','1'); 
+insert into Citas (paciente_id, horario_id, estado, activo) 
+values (1, 1,'Pendiente','1'); 
+insert into Citas (paciente_id, horario_id, estado, activo) 
+values (2, 2,'Pendiente','1'); 
 
 select * from Citas;
 
