@@ -1,5 +1,5 @@
 <?php
-$funcionUrl = funcionesBack("IndicePersonas");
+$funcionUrl = funcionesBack("IndiceLogin");
 require_once($funcionUrl);
 
 echo '<script>
@@ -66,27 +66,29 @@ a{
     margin-right: 2px;
 }
 
+.link{
+    color: blue;
+}
 
 </style>
+
+
 
 <div style="margin-top:200px;">
     <div class="subBody">
         <div class="topBar">
-            <h2 class="title-view"> Personas registradas </h2> <br>
+            <h2 class="title-view"> Usuarios registrados </h2> <br>
         </div>
 
         <div class="subOptions">
-            <button class="boton"><a href="AggPersonasView" class="agregar"> Ingresar persona </a> </button>
+            <button class="boton"><a href="AggLoginView" class="agregar"> Ingresar usuario </a> </button>
             <table class="table">
                 <thead>
                     <tr>
-                        <th> DNI </th>
-                        <th> Nombres </th>
-                        <th> Dirección </th>
-                        <th> Correo Electronico </th>
-                        <th> Telefono</th>
-                        <th> Sexo </th>
-                        <th> Opciones </th>
+                        <th> Usuario </th>
+                        <th> Contraseña </th>
+                        <th> Persona </th>
+                        <th> Rol </th>
                     </tr>
                 </thead>
                 <tbody>
@@ -96,16 +98,15 @@ a{
                         while ($row = $resultado->fetch_assoc()) {
                             //Recorrer la matriz asociativa
                             echo ("<tr>");
-                            echo ("<td> " . $row['DNI'] . "</td>");
-                            echo ("<td> " . $row['nombres'] . " " . $row['apellidos'] . "</td>");
-                            echo ("<td> " . $row['direccion'] . "</td>");
-                            echo ("<td> " . $row['correo'] . "</td>");
-                            echo ("<td> " . $row['telefono'] . "</td>");
-                            echo ("<td> " . $row['sexo'] . "</td>");
+                            echo ("<td> " . $row['usuario'] . "</td>");
+                            echo ("<td> " . $row['contrasenia'] . "</td>");
+                            echo ("<td> <a class='link' href=../personas/LecPersonasView/" . $row['persona_id'] . "> Click para ver </a></td>");
+                            $queryrol = "SELECT * FROM Roles WHERE id=".$row["rol_id"];
+                            $resultado2 = $conn->query($queryrol);
+                            $rol = $resultado2->fetch_assoc();
+                            echo ("<td> " . $rol['descripcion']. "</td>");
                             echo ("<td>");
-                            echo ("<button class='opc'> <a  href='LecPersonasView/" . $row['id'] . "'> Leer </a> </button>");
-                            echo ("<button class='opc'> <a href='ActPersonasView/" . $row['id'] . "'> Actualizar </a> </button>");
-                            echo ("<button class='opc'> <a onclick='return alerta();' href='EliPersonasView/" . $row['id'] . "'> Eliminar </a> </button>");
+                            echo ("<button class='opc'> <a onclick='return alerta();' href='EliLoginView/" . $row['id'] . "'> Eliminar </a> </button>");
                             echo ("</td>");
                             echo ("</tr>");
                         }

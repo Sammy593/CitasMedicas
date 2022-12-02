@@ -47,7 +47,7 @@
     font-size: 1.5rem;
 }
 
-form {
+.subTables {
     display: flex;
     flex-direction: column;
     width: 50%;

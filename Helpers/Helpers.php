@@ -15,7 +15,11 @@
          return BASE_URL."/Assets";
     }
 
-    
+    //Retorna ruta para archivos de Views
+    function views(){
+        return BASE_URL."/Views";
+   }
+   
     //Templates html
     function headPath($data=""){
         $view_control_sidebar = "Views/template/head.php";
