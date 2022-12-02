@@ -1,9 +1,9 @@
 <?php
-include_once('../template/head.php');
+include_once('Views/template/head.php');
 ?>
 
 <?php
-include_once('../template/aside.php');
+include_once('Views/template/aside.php');
 ?>
 
 <!-- Espacio para colocar los formularios -->
@@ -127,5 +127,5 @@ include_once('../template/aside.php');
 <script src="../js/teachers.js" type="module"></script>
 
 <?php
-include_once('../template/scripts.php');
+include_once('Views/template/scripts.php');
 ?>

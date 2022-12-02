@@ -64,7 +64,7 @@ justify-self: right;
 }
 
 .fondoVozandes{
-    background-image: url("/Assets/img/imgDashboard/fondoBienvenida.jpg");
+    background-image: url("../img/imgDashboard/fondoBienvenida.jpg");
     background-attachment: fixed;
     background-size:100% 100%;
     height:calc(100vh);
