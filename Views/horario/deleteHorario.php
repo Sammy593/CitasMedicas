@@ -1,4 +1,4 @@
 <?php
-    $funcionUrl = funcionesBack("EliminarHorario");
+    $funcionUrl = funcionesBack("eliminarHorario");
     require_once($funcionUrl);
 ?> 
