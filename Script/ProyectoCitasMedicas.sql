@@ -78,13 +78,11 @@ CREATE TABLE Horario(
 CREATE TABLE Citas(
     id int primary key auto_increment,
     paciente_id int not null,
-    persona_id int not null,
+    horario_id int not null,
     estado varchar(1) not null,
-    fechacita datetime not null,
-    fechaatencion datetime,
     activo boolean not null,
-    foreign KEY (id) references Pacientes(id),
-    foreign KEY (id) references horario(id)
+    foreign KEY (paciente_id) references Pacientes(id),
+    foreign KEY (horario_id) references horario(id)
 );
 
 
