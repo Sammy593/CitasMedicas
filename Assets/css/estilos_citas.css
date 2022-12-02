@@ -1,0 +1,90 @@
+.card{
+    margin: auto;
+    padding-top: 30px;
+}
+.title{
+    font-size: 24px;
+    text-align: center;
+    font-weight: 800;
+}
+.citasContainer{
+    width:900px;
+    margin:auto;
+    margin-top: 30px;
+    padding: 20px;
+    box-shadow: 2px 2px 4px rgb(209, 209, 209),
+    -2px -2px 4px rgb(209, 209, 209);
+}
+.optionsContainer{
+    display: flex;
+    flex-direction: row;
+}
+.container_btnAddCita{
+    width: 200px;
+    height: 20px;
+}
+.btnAddCita,
+.btnVerAnteriores{
+    text-decoration: none;
+    color: white;
+    padding: 7px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.btnAddCita{
+    background-color: rgb(17, 156, 156);
+    box-shadow: 1px 1px 4px rgb(17, 156, 156);
+}
+.btnVerAnteriores{
+    background-color: rgb(92, 92, 92);
+    box-shadow: 1px 1px 4px rgb(92, 92, 92);
+}
+#formCitas{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    margin-top: 20px;
+    width: 90%;
+}
+#formCitas input[type = "submit"] {
+    background-color: rgb(213, 236, 177);
+    width: 100px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#selectPaciente,
+#selectEspecialidad{
+    width: 150px;
+}
+
+.tagContainer{
+    background-color: rgb(243, 202, 202);
+    margin-top: 10px;
+    padding: 10px;
+    width: 800px;
+}
+
+.tableCitasContainer{
+    margin-top: 20px;
+}
+
+th{
+    padding: 5px;
+    font-size: 18px;
+    background-color: rgba(5,170,170,0.9);
+}
+td{
+    padding: 5px;
+    text-align: center;
+}
+
+tr:nth-child(even){
+    background-color: rgba(1,1,1,0.2);
+}
+
+tr:hover{
+    background-color: rgba(3,3,3,0.4);
+}
