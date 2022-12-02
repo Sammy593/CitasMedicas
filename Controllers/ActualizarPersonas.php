@@ -55,7 +55,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
              //Ejecutar statemet
              if($stmt -> execute()){
-                header("location: ../index.html");
+                header("location: /Views/personas/LecPersonasView.php");
                 exit();
              }else{
                 echo "Error, el statemet no se ejecutó";

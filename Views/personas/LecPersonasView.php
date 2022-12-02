@@ -1,23 +1,17 @@
 <?php
-    include_once('../Controllers/LeerPersonas.php');
+    $funcionUrl = funcionesBack("LeerPersonas");
+    require_once($funcionUrl);
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        label{
-            font-weight: bold;
-            font-size: 15px;
-            margin: 2px 2px;
-        }
-    </style>
-</head>
-<body>
+<?php
+    headPath();
+?>
+
+
+<?php
+    asidePath();
+?>
+
     <h1> Datos del usuario </h1>
     <div>
     <label for=""> DNI </label>
@@ -44,7 +38,9 @@
     <p> <?php echo $sexo; ?> </p>
     </div>
     <div>
-    <a href="../index.html"> Volver </a>
+    <a href="../../index.php"> Volver </a>
     </div>
-</body>
-</html>
+
+<?php
+    scriptsPath();
+?>
