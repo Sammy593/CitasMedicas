@@ -1,10 +1,11 @@
 <?php
-require_once '../conexion/conexion.php';
+require_once 'conexion/conexion.php';
+//print_r($params);
 
-if(isset($_GET['id']) && !empty(trim($_GET['id']))){
+if(isset($params) && !empty(trim($params))){
     $query = 'SELECT * FROM Personas WHERE id = ?';
     if($stmt = $conn->prepare($query)){
-        $stmt -> bind_param('i', $_GET['id']);
+        $stmt -> bind_param('i', $params);
         if($stmt->execute()){
             $resultado = $stmt -> get_result();
             if($resultado -> num_rows == 1){

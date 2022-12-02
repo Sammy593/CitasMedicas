@@ -13,7 +13,7 @@
      }
 
      
-     /*$params = "";
+     $params = "";
 
      if(!empty($arrUrl[2])){
           if($arrUrl[2] != ""){
@@ -22,7 +22,7 @@
                }
                $params = trim($params,",");
           }
-     }*/
+     }
 
      //Load
      require_once("Libraries/Load.php");

@@ -54,7 +54,7 @@ echo '<script>
                     echo ("<td> " . $row['telefono'] . "</td>");
                     echo ("<td> " . $row['sexo'] . "</td>");
                     echo ("<td>");
-                    echo ("<a class='btn' href='LecPersonasView.php?id=" . $row['id'] . "'> Leer </a>");
+                    echo ("<a class='btn' href='LecPersonasView/". $row['id'] . "'> Leer </a>");
                     echo ("<a class='btn' href='ActPersonasView.php?id=" . $row['id'] . "'> Actualizar </a>");
                     echo ("<a onclick='return alerta();' class='btn' href='EliPersonasView.php?id=" . $row['id'] . "'> Eliminar </a>");
                     echo ("</td>");

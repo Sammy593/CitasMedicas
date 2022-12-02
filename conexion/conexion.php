@@ -8,10 +8,10 @@ define("PASSWORD", "");
 define("DBNAME", "ProyectoCitasMedicas");
 
 //Creación de la conexión a la base de datos usando mysqli
-$con = new mysqli(SERVERNAME, USERNAME, PASSWORD, DBNAME);
+$conn = new mysqli(SERVERNAME, USERNAME, PASSWORD, DBNAME);
 
 //Controlar la conexión
-if ($con -> connect_error){
+if ($conn -> connect_error){
     die("Conexión fallida: " . $conn -> connect_error);
 
 }

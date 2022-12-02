@@ -38,7 +38,7 @@
     <p> <?php echo $sexo; ?> </p>
     </div>
     <div>
-    <a href="../../index.php"> Volver </a>
+    <a href="../../dashboard/"> Volver </a>
     </div>
 
 <?php
