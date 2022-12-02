@@ -15,30 +15,30 @@ asidePath();
     <h2> Agregar un nuevo usuario </h2>
     <p> Llene los campos solicitados</p>
     <div class="subOptions">
-        <form action="../Controllers/AgregarPersonas.php" method="post">
+        <form action="" method="post">
             <div>
                 <label for="DNI"> DNI </label>
-                <input type="text" name="DNI" required>
+                <input type="text" name="DNI" value="<?php echo($DNI) ?>"  required>
             </div>
             <div>
                 <label for="nombres"> Nombres </label>
-                <input type="text" name="nombres" required>
+                <input type="text" name="nombres" value="<?php echo($nombres) ?>" required>
             </div>
             <div>
                 <label for="apellidos"> Apellidos </label>
-                <input type="text" name="apellidos" required>
+                <input type="text" name="apellidos" value="<?php echo($apellidos) ?>" required>
             </div>
             <div>
                 <label for="direccion"> Dirección </label>
-                <input type="text" name="direccion" required>
+                <input type="text" name="direccion" value="<?php echo($direccion) ?>" required>
             </div>
             <div>
                 <label for="correo"> Correo electronico </label>
-                <input type="text" name="correo" required>
+                <input type="text" name="correo" value="<?php echo($correo) ?>" required>
             </div>
             <div>
                 <label for="telefono"> Telefono </label>
-                <input type="text" name="telefono" required>
+                <input type="text" name="telefono" value="<?php echo($telefono) ?>" required>
             </div>
             <div>
                 <label for="sexo"> Sexo </label>
@@ -57,7 +57,7 @@ asidePath();
             </div>
             <div>
                 <input type="submit" value="Registrar usuario">
-                <a href="../index.html"> Cancelar </a>
+                <a href="IndPersonasView"> Cancelar </a>
             </div>
 
         </form>

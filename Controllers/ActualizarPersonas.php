@@ -49,13 +49,13 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
         //Preparar la consulta
         if($stmt = $conn-> prepare($query)){
-            $stmt -> bind_param("ssssssss", $_POST['DNI'], $_POST['nombres'],
+            $stmt -> bind_param("ssssssssi", $_POST['DNI'], $_POST['nombres'],
             $_POST['apellidos'], $_POST['direccion'], $_POST['correo'],
-             $_POST['telefono'], $_POST['sexo'],$estado);
+             $_POST['telefono'], $_POST['sexo'],$estado,$params);
 
              //Ejecutar statemet
              if($stmt -> execute()){
-                header("location: /Views/personas/LecPersonasView.php");
+                header("location: ../IndPersonasView");
                 exit();
              }else{
                 echo "Error, el statemet no se ejecutó";

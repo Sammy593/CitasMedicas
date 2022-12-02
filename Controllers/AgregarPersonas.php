@@ -1,5 +1,5 @@
 <?php
-require_once('conexion/conexion.php');
+require_once('../conexion/conexion.php');
 //Verificar si los datos fueron enviados por el metodo post
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
     //Vrificar que
@@ -24,7 +24,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
              //Ejecutar statemet
              if($stmt -> execute()){
-                header("location: Views/personas/AggPersonasView");
+                header("location: ../personas/IndPersonasView");
                 exit();
              }else{
                 echo "Error, el statemet no se ejecutó";

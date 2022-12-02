@@ -1,4 +1,4 @@
 <?php
-    $funcionUrl = funcionesBack("ActualizarPersonas");
+    $funcionUrl = funcionesBack("EliminarPersonas");
     require_once($funcionUrl);
 ?>

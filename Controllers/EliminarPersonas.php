@@ -5,7 +5,7 @@ if(isset($params) && !empty(trim($params))){
     if($stmt = $conn -> prepare($query)){
         $stmt -> bind_param('i',$params);
         if($stmt -> execute()){
-            header('location:../Vista/principal.php');
+            header('location: ../IndPersonasView');
             exit();
         }else{
             echo 'Error! No se ejecuto la consulta en la base de datos';

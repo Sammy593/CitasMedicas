@@ -9,7 +9,7 @@ asidePath();
     <h2> Agregar un nuevo usuario </h2>
     <p> Llene los campos solicitados</p>
     <div class="subOptions">
-        <form action="../Controllers/AgregarPersonas.php" method="post" class="subOptions">
+        <form action="../Controllers/AgregarPersonas.php" method="post">
             <div>
                 <label for="DNI"> DNI </label>
                 <input type="text" name="DNI" required>
@@ -51,7 +51,7 @@ asidePath();
             </div>
             <div>
                 <input type="submit" value="Registrar usuario">
-                <a href="../index.html"> Cancelar </a>
+                <a href="IndPersonasView"> Cancelar </a>
             </div>
 
         </form>

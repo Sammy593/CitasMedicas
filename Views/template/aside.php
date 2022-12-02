@@ -1,7 +1,7 @@
 <div class="container">
         <div class="options">
             <div>
-                <img src="../Assets/img/imgDashboard/logoHome.jpg" alt="logoHome" style="height: 50%; min-height: 20px; max-height: 200px" />
+                <img src="<?php echo (media()) ?>/img/imgDashboard/logoHome.jpg" alt="logoHome" style="height: 50%; min-height: 20px; max-height: 200px" />
             </div>
             <ul>
                 <li data-id="medicos">Médicos</li>
