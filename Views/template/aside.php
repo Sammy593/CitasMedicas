@@ -7,10 +7,11 @@
                 <li data-id="citas"><a href="../citas/citas">Citas</a></li>
                 <li data-id="especialidades"><a href="../especialidades/especialidades">Especialidades</a></li>
                 <li data-id="horarios"><a href="../horario/horario">Horario</a></li>
-                <li data-id="medicos"><a href="../medicos/medicos">Médicos</a></li>
+              <!--   <li data-id="medicos"><a href="../medicos/medicos">Médicos</a></li>-->
                 <li data-id="pacientes"><a href="../paciente/paciente">Pacientes</a></li>
+                <li data-id="personas"><a href="../persona-login/IndLoginView">Logins</a></li>
                 <li data-id="personas"><a href="../personas/IndPersonasView">Usuarios registrados</a></li>
-                <li data-id="salir"><a href="../medicos/medicos">Cerrar Sesión</a></li>
+                <li data-id="salir"><a href="../logout/logout">Cerrar Sesión</a></li>
             </ul>
         </div>
         <!-- <iframe src="static/views/courses.html" frameborder="0" class="views"></iframe> -->

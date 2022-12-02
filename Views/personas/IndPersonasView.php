@@ -1,4 +1,8 @@
 <?php
+include_once('Views/template/head.php');
+?>
+
+<?php
 $funcionUrl = funcionesBack("IndicePersonas");
 require_once($funcionUrl);
 
@@ -19,9 +23,6 @@ echo '<script>
 
 ?>
 
-<?php
-headPath();
-?>
 
 <?php
 asidePath();

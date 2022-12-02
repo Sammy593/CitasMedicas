@@ -8,10 +8,10 @@ if($_SESSION['id'] != null){
     //Permite cerrar la sesion
     session_destroy();
     //redige a la pagina index.html
-    header('location:index.php');
+    header('location: ../login');
 
 }else{
-    header('location:index.php');
+    header('location: ../login');
 }
 
 ?>

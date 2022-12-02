@@ -4,7 +4,7 @@ session_start();
 
 // Validar si se esta ingresando directamente sin login
 if (!$_SESSION) {
-    header('location:index.php');
+    header('location: login');
 }
 
 ?>

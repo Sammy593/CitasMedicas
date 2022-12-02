@@ -16,7 +16,7 @@ include_once('Views/template/aside.php');
         <div class="currentPeriod"></div>
     </div>
     <div class="subOptions">
-        <form class="subTables"action="<?php echo $_SERVER['PHP_SELF'];?>" method="post" enctype="multipart/form-data">
+        <form class="subTables"action="" method="post" enctype="multipart/form-data">
             <label for="" class="title-form">Nuevo Horario</label>
             <div class="section-block">
                 <label for="fechadatencion">Fecha Atención</label>
@@ -99,7 +99,7 @@ include_once('Views/template/aside.php');
                        echo("<a style=' background-color: #eec40b;
                        color: white;
                        padding: 5px 10px;
-                       text-decoration: none;' onclick='return alerta();' href='deleteHorario/".$row['id']."'> Eliminar </a>");
+                       text-decoration: none;' onclick='return alerta();' href='../deleteHorario/".$row['id']."'> Eliminar </a>");
                        echo '</div>';
                        echo '</td>';
                        echo '</tr>';

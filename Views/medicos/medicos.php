@@ -65,11 +65,6 @@ include_once('Views/template/aside.php');
                 </select>
             </div>
             <div class="section-block">
-                <label for="">Foto</label>
-                <input type="file" name="foto" id="foto" title="Ingrese una foto" required />
-                <div class="text-danger error-foto hidden"></div>
-            </div> 
-            <div class="section-block">
                 <input type="submit" value="Guardar">
             </div>
         </form>
